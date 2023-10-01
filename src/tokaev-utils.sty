@@ -2,3 +2,29 @@
 \ProvidesPackage{tokaev-utils}[
     2023/10/01 Utils package
 ]
+
+% Colour boxes
+\RequirePackage[skins]{tcolorbox}
+% Font for shortcuts
+\RequirePackage{opensans}
+
+\newtcbox{\Shortcut}{
+    % Inline shortcut
+    on line,
+    % Colors
+    enhanced,
+    colback=white!90!black,
+    colframe=white!50!black,
+    shadow={0pt}{-0.1em}{0mm}{black!20!white},
+    % Sizes
+    boxsep=0pt,
+    left=0.6em,
+    right=0.6em,
+    top=0.2em,
+    bottom=0.2em,
+    % Border
+    arc=2pt,
+    boxrule=0.5pt,
+    % Font family
+    fontupper=\scriptsize\opensans,
+}
