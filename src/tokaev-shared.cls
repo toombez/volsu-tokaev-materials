@@ -31,3 +31,5 @@
 }
 
 \setlength{\belowcaptionskip}{-0.5em}
+
+\RequirePackage[outputdir=../output]{minted}

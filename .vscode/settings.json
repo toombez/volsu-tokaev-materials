@@ -1,3 +1,18 @@
 {
-    "latex-workshop.latex.outDir": "%WORKSPACE_FOLDER%/output/",
+  "latex-workshop.latex.outDir": "%WORKSPACE_FOLDER%/output/",
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk",
+      "command": "latexmk",
+      "args": [
+          "-synctex=1",
+          "-interaction=nonstopmode",
+          "-file-line-error",
+          "-pdf",
+          "-shell-escape",
+          "-outdir=%WORKSPACE_FOLDER%/output",
+          "%DOC%"
+      ]
+    }
+  ]
 }
