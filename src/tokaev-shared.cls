@@ -11,6 +11,8 @@
 \RequirePackage{caption}
 \RequirePackage{xcolor}
 
+\graphicspath{{images/}}
+
 \addto\captionsenglish{\renewcommand{\figurename}{Рис.}}
 
 \DeclareCaptionJustification{center}{\centering}
