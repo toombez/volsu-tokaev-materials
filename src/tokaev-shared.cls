@@ -33,3 +33,5 @@
 \setlength{\belowcaptionskip}{-0.5em}
 
 \RequirePackage[outputdir=../output]{minted}
+\RequirePackage{indentfirst}
+\setlength{\parindent}{5ex}
