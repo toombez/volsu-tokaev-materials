@@ -19,6 +19,7 @@
     justification=center,
     labelsep=endash,
     width=0.8\textwidth,
+    skip=0.5em,
     font={
         it,
         rm,
@@ -26,3 +27,5 @@
         color=gray
     },
 }
+
+\setlength{\belowcaptionskip}{-0.5em}
