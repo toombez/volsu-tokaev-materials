@@ -10,6 +10,8 @@
 \RequirePackage[T2A]{fontenc}
 \RequirePackage{caption}
 \RequirePackage{xcolor}
+\RequirePackage[outputdir=../output]{minted}
+\RequirePackage{indentfirst}
 
 \graphicspath{{images/}}
 
@@ -31,3 +33,14 @@
 }
 
 \setlength{\belowcaptionskip}{-0.5em}
+\setlength{\parindent}{5ex}
+
+\usemintedstyle{friendly}
+\setminted{
+    fontsize=\normalsize,
+    xleftmargin=\parindent,
+}
+\setmintedinline{
+    fontsize=\normalsize,
+    xleftmargin=\parindent,
+}
