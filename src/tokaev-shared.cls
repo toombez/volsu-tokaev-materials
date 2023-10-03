@@ -37,12 +37,10 @@
 
 \usemintedstyle{friendly}
 \setminted{
-    fontsize=\small,
-    fontfamily=tt,
+    fontsize=\normalsize,
     xleftmargin=\parindent,
 }
 \setmintedinline{
-    fontsize=\small,
-    fontfamily=tt,
+    fontsize=\normalsize,
     xleftmargin=\parindent,
 }
