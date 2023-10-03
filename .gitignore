@@ -1,6 +1,9 @@
 # Latex-workshop output
 output/*
 
+# Document images path
+src/images/*
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
