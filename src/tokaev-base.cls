@@ -3,7 +3,10 @@
     2023/10/01 Shared class
 ]
 
-\LoadClass[]{article}
+\LoadClass[
+    a4paper,
+    12pt
+]{extarticle}
 
 \RequirePackage{graphicx}
 \RequirePackage[english,main=russian]{babel}
