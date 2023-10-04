@@ -15,6 +15,15 @@
 \RequirePackage[
     compact,
 ]{titlesec}
+\RequirePackage[
+    left = 3cm,
+    right = 1cm,
+    top = 2cm,
+    bottom = 2cm,
+    bindingoffset = 0cm,
+    includefoot,
+    heightrounded,
+]{geometry}
 
 \graphicspath{{images/}}
 
