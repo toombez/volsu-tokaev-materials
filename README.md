@@ -4,12 +4,6 @@
 
 Shared tex class for other classes
 
-## [tokaev-laboratory](./src/tokaev-laboratory.cls)
-
-Tex class for writing laboratory works
-
-## [tokaev-lecture](//src/tokaev-lecture.cls)
-
 Tex class for writing lectures
 
 ## [tokaev-presentation](./src/tokaev-presentation.cls)
