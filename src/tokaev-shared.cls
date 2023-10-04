@@ -12,6 +12,10 @@
 \RequirePackage{xcolor}
 \RequirePackage[outputdir=../output]{minted}
 \RequirePackage{indentfirst}
+\RequirePackage[
+    compact,
+    uppercase
+]{titlesec}
 
 \graphicspath{{images/}}
 
@@ -44,3 +48,8 @@
     fontsize=\normalsize,
     xleftmargin=\parindent,
 }
+
+\titlespacing{\section}{\parindent}{*2}{\wordsep}
+\titlespacing{\subsection}{\parindent}{*2}{\wordsep}
+\titlespacing{\subsubsection}{\parindent}{*2}{\wordsep}
+
