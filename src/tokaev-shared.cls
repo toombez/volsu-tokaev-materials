@@ -14,7 +14,6 @@
 \RequirePackage{indentfirst}
 \RequirePackage[
     compact,
-    uppercase
 ]{titlesec}
 
 \graphicspath{{images/}}
@@ -53,3 +52,14 @@
 \titlespacing{\subsection}{\parindent}{*2}{\wordsep}
 \titlespacing{\subsubsection}{\parindent}{*2}{\wordsep}
 
+\makeatletter
+\def\@maketitle{%
+    \newpage
+    \null\LARGE
+    \vskip 0.5em
+    \begin{center}
+         \textbf{\MakeUppercase{\@title}}
+    \end{center}
+    \vskip 1em
+}
+\makeatother
