@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{tokaev-shared}[
+\ProvidesClass{tokaev-base}[
     2023/10/01 Shared class
 ]
 

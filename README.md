@@ -1,14 +1,8 @@
 # VolSU Tokaev materials
 
-## [tokaev-shared](./src/tokaev-shared.cls)
+## [tokaev-base](./src/tokaev-shared.cls)
 
 Shared tex class for other classes
-
-## [tokaev-laboratory](./src/tokaev-laboratory.cls)
-
-Tex class for writing laboratory works
-
-## [tokaev-lecture](//src/tokaev-lecture.cls)
 
 Tex class for writing lectures
 
