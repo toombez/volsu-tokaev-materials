@@ -1,6 +1,6 @@
 # VolSU Tokaev materials
 
-## [tokaev-shared](./src/tokaev-shared.cls)
+## [tokaev-base](./src/tokaev-shared.cls)
 
 Shared tex class for other classes
 
