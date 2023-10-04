@@ -72,3 +72,6 @@
     \vskip 1em
 }
 \makeatother
+
+\pagenumbering{arabic}
+\linespread{1.3}
