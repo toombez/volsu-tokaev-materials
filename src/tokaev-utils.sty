@@ -8,9 +8,10 @@
 
 \newtcbox{\Key}{
     % Colors
-    colback=white!95!black,
+    colback=white!97!black,
     colframe=white!40!black,
     % Sizes
+    height=1em,
     left=0.3em,
     right=0.3em,
     top=0.1em,
@@ -21,4 +22,42 @@
     % Misc
     fontupper=\ttfamily\normalsize, % text font
     on line, % inline
+    valign=center,
+}
+
+\newtcbox{\Command}{
+    % Colors
+    colback=white!98!black,
+    % Sizes
+    height=1em,
+    left=0.3em,
+    right=0.3em,
+    top=0.2em,
+    bottom=0.2em,
+    boxsep=0pt,
+    arc=0.1em, % border-radius
+    boxrule=0em, % border-size
+    % Misc
+    fontupper=\ttfamily\normalsize, % text font
+    on line, % inline
+    valign=center,
+}
+
+\newtcbox{\Path}{
+    % Colors
+    colback=white!98!black,
+    coltext=white!40!black,
+    % Sizes
+    height=1em,
+    left=0.3em,
+    right=0.3em,
+    top=0.2em,
+    bottom=0.2em,
+    boxsep=0pt,
+    arc=0.1em, % border-radius
+    boxrule=0em, % border-size
+    % Misc
+    fontupper=\ttfamily\normalsize, % text font
+    on line, % inline
+    valign=center,
 }
