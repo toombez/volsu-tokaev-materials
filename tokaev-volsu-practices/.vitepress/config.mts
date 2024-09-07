@@ -46,4 +46,10 @@ export default defineConfig({
             { icon: 'github', link: 'https://github.com/toombez/volsu-tokaev-materials' },
         ],
     },
+
+    markdown: {
+        math: true
+    },
+
+    lang: 'ru-RU',
 })
