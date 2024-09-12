@@ -21,30 +21,7 @@
   },
   "devDependencies": {
     "@slidev/cli": "^0.49.29",
+    "@slidev/theme-seriph": "^0.25.0",
     "playwright-chromium": "^1.47.0"
-  },
-  "slidev": {
-    "defaults": {
-      "colorSchema": "both",
-      "highlighter": "all",
-      "author": "Тимур Токаев",
-      "aspectRatio": "4/3",
-      "transition": "slide-left",
-      "canvasWidth": 680,
-      "fonts": {
-        "sans": "Roboto",
-        "serif": "Roboto Slab",
-        "mono": "Fira Code"
-      },
-      "htmlAttrs": {
-        "dir": "ltr",
-        "lang": "ru"
-      },
-      "download": true,
-      "drawings": {
-        "persist": false
-      },
-      "mdc": true
-    }
   }
 }

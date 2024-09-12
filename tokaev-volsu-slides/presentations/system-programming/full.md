@@ -1,5 +1,23 @@
 ---
-theme: ../../
+theme: default
+title: Системное программирование
+drawings:
+  persist: false
+transition: slide-left
+mdc: true
+aspectRatio: 4/3
+canvasWidth: 680
+
+fonts:
+    sans: Roboto
+    serif: Roboto Slab
+    mono: Fira Code
+
+htmlAttrs:
+    dir: ltr
+    lang: ru
+
+author: Тимур Токаев
 ---
 
 # Системное программирование
@@ -8,7 +26,11 @@ theme: ../../
 src: './01-intro.md'
 ---
 
+---
 
+---
+src: './02-rust-lang.md'
+---
 
 ---
 
