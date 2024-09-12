@@ -27,8 +27,6 @@ src: './01-intro.md'
 ---
 
 ---
-
----
 src: './02-rust-lang.md'
 ---
 
