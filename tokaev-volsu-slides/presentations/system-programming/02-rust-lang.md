@@ -194,10 +194,23 @@ fn main() {
 ```
 
 ```rs
-fn function_name(arg1: Type1, arg2: Type2, /** ...args */): ReturnType {
+fn function_name(arg1: Type1, arg2: Type2, /** ...args */) -> ReturnType {
     // ...
 
     <ReturnType>
 }
+```
+
+```rs{*|1}
+fn function_name(
+    arg1: mut Type1,
+    arg2: mut Type2,
+    /** ...args */
+) -> ReturnType {
+    // ...
+
+    <ReturnType>
+}
+```
 ```
 ````
