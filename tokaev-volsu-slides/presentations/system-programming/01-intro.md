@@ -1,5 +1,4 @@
 ---
-theme: ../../
 layout: intro
 ---
 
