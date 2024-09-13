@@ -7,3 +7,4 @@
 ## Список практических работ
 
 1. [Знакомство с языком программирования Rust](/system-programming/practice-1)
+1. [Управление потоком Rust](/system-programming/practice-2)
