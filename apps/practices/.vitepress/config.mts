@@ -4,6 +4,9 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
     title: "Курсы ВФ ВолГУ",
     description: "Материалы по различным курсам колледжа",
+
+    outDir: 'dist',
+
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
         nav: [

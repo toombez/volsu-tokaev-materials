@@ -15,7 +15,7 @@ importers:
         specifier: ^5.4.5
         version: 5.4.5
 
-  apps/tokaev-volsu-practices:
+  apps/practices:
     devDependencies:
       markdown-it-mathjax3:
         specifier: ^4.3.2
