@@ -1,5 +1,5 @@
 {
-  "name": "tokaev-volsu-slides",
+  "name": "@volsu-tokaev-materials/slides",
   "version": "0.0.0",
   "type": "module",
   "keywords": [
@@ -9,7 +9,7 @@
     "node": ">=18.0.0"
   },
   "scripts": {
-    "build": "slidev build",
+    "build": "slidev build presentations/system-programming/full.md",
     "dev": "slidev presentations/system-programming/full.md",
     "export": "slidev export presentations/system-programming/full.md"
   },

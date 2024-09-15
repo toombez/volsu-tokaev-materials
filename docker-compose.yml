@@ -1,0 +1,31 @@
+version: "3"
+
+services:
+  practices:
+    container_name: practices
+    build:
+      context: .
+      dockerfile: ./apps/practices/Dockerfile
+    restart: always
+
+  slides:
+    container_name: slides
+    build:
+      context: .
+      dockerfile: ./apps/slides/Dockerfile
+    restart: always
+
+  nginx:
+    image: nginx:1.27.1-alpine-slim
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    environment:
+      - NGINX_PORT=80
+
+# Define a network, which allows containers to communicate
+# with each other, by using their container name as a hostname
+networks:
+  app_network:
+    external: true
