@@ -12,7 +12,7 @@ services:
     container_name: slides
     build:
       context: .
-      dockerfile: ./apps/slieds/Dockerfile
+      dockerfile: ./apps/slides/Dockerfile
     restart: always
 
   nginx:
