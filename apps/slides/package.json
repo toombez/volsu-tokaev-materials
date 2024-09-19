@@ -9,7 +9,7 @@
     "node": ">=18.0.0"
   },
   "scripts": {
-    "build": "slidev build presentations/system-programming/full.md",
+    "build": "slidev build",
     "dev": "slidev presentations/system-programming/full.md",
     "export": "slidev export presentations/system-programming/full.md"
   },

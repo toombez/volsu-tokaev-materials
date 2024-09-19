@@ -23,6 +23,7 @@ FROM base AS installer
 
 RUN apk add --no-cache libc6-compat
 RUN apk update
+RUN apk add bash
 
 WORKDIR /app
 
@@ -32,7 +33,12 @@ RUN corepack enable
 RUN pnpm install --frozen-lockfile
 
 COPY --from=builder /app/out/full/ .
-RUN pnpm dlx turbo run build --filter="@volsu-tokaev-materials/slides" -- --base /slides
+
+RUN pnpm install --frozen-lockfile
+RUN npm i @slidev/cli -g
+
+RUN cd ./apps/slides && \
+    ./slidev.sh
 
 # # =============================================================================
 # # RUNNER stage
@@ -40,4 +46,5 @@ RUN pnpm dlx turbo run build --filter="@volsu-tokaev-materials/slides" -- --base
 
 FROM lipanski/docker-static-website:2.4.0
 
-COPY --from=installer /app/apps/slides/presentations/system-programming/dist .
+COPY --from=installer /app/apps/slides/dist .
+
