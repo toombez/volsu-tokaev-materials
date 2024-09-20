@@ -39,6 +39,10 @@ src: './04-ownership-borrowing.md'
 ---
 
 ---
+src: './05-structs.md'
+---
+
+---
 
 # Контакты
 
