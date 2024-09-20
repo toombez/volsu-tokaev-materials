@@ -57,7 +57,7 @@ fn build_user(email: String, username: String) -> User {
 }
 ```
 
-```rs
+```rs{*|5-6|}
 // Функция-конструктор
 fn build_user(email: String, username: String) -> User {
     User {
@@ -121,7 +121,7 @@ fn main() {
 # Методы структур
 
 ````md magic-move
-```rs
+```rs{*|1-5|7-11|14-17|21|*}
 #[derive(Debug)]
 struct Rectangle {
     width: u32,
@@ -147,7 +147,7 @@ fn main() {
 }
 ```
 
-```rs
+```rs{*|3-5,10|14,15|*}
 // Методы с названием полей
 impl Rectangle {
     fn width(&self) -> bool {
@@ -167,7 +167,7 @@ fn main() {
 }
 ```
 
-```rs
+```rs{*|16,17|*}
 // Методы с дополнительными параметрами
 fn main() {
     let rect1 = Rectangle {
@@ -188,7 +188,7 @@ fn main() {
 }
 ```
 
-```rs
+```rs{*|7|*}
 // Методы с дополнительными параметрами
 impl Rectangle {
     fn area(&self) -> u32 {
@@ -201,7 +201,7 @@ impl Rectangle {
 }
 ```
 
-```rs
+```rs{*|4|*}
 // Ассоциативные функции
 impl Rectangle {
     fn square(size: u32) -> Self {
@@ -213,7 +213,7 @@ impl Rectangle {
 }
 ```
 
-```rs
+```rs{*|2,8|*}
 // Несколько impl блоков
 impl Rectangle {
     fn area(&self) -> u32 {

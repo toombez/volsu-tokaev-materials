@@ -21,7 +21,7 @@ layout: intro
 let s = "hello";
 ```
 
-```rs
+```rs{*|1|2|3-5}
 {                      // s не ещё не инициализированна
         let s = "hello";   // s доступна, начиная с этой строки
 
@@ -46,7 +46,7 @@ fn main() {
 }
 ```
 
-```rs
+```rs{*|2-3|7|2-3,7|12-21|*}
 fn foo() {
     let y = 5;
     let z = 100;
@@ -74,7 +74,7 @@ fn main() {
 
 # Куча
 
-```rs
+```rs{*|2|3|6-14|*}
 fn main() {
     let x = Box::new(5);
     let y = 42;
@@ -125,12 +125,12 @@ println!("{s}"); // Выведет `hello, world!`
 # Перемещение (move)
 
 ````md magic-move
-```rs
+```rs{*|1|2|*}
 let x = 5;
 let y = x;
 ```
 
-```rs
+```rs{*|1|2|*}
 let s1 = String::from("hello");
 let s2 = s1;
 ```
@@ -224,7 +224,7 @@ flowchart LR
 # Copy и Clone
 
 ````md magic-move
-```rs
+```rs{*|2|3|*}
 // Copy
 let x = 5;
 let y = x;
@@ -232,7 +232,7 @@ let y = x;
 println!("x = {x}, y = {y}");
 ```
 
-```rs
+```rs{*|2|3|5|*}
 // Clone
 let s1 = String::from("hello");
 let s2 = s1.clone();
@@ -260,7 +260,7 @@ println!("s1 = {s1}, s2 = {s2}");
 # Владение (Ownership) и функции
 
 ````md magic-move
-```rs
+```rs{*|2|4-6|8|10-12|14-15|*}
 fn main() {
   let s = String::from("hello");  // s появляется в области видимости main
 
@@ -278,8 +278,7 @@ fn main() {
   // особенного не происходит
 ```
 
-```rs
-
+```rs{*|1-2|4|6|*}
 fn takes_ownership(some_string: String) { // Строка появляется в области
                                           // видимости
     println!("{some_string}");
@@ -296,7 +295,7 @@ fn makes_copy(some_integer: i32) { // целое число входит в об
 # Владение (Ownership) и возращение из функции
 
 ````md magic-move
-```rs
+```rs{*|2-3|5|6-9|10-12|*}
 fn main() {
     let s1 = gives_ownership();         // gives_ownership перемещает
                                         // результат в переменную s1
@@ -311,8 +310,7 @@ fn main() {
 
 ```
 
-```rs
-
+```rs{*|1-3|5-6|8-11|14|15-16|18-19|*}
 fn gives_ownership() -> String {             // gives_ownership перемещает
                                              // возврат в область той функции,
                                              // в которой была вызвана
@@ -340,10 +338,7 @@ fn takes_and_gives_back(a_string: String) -> String { // a_string появляе
 
 # Ссылки (reference) и заимствование (borrowing)
 
-<v-switch>
-<template #0>
-
-```rs
+```rs{*|2|4|9-11|6|*}
 fn main() {
     let s1 = String::from("hello");
 
@@ -357,9 +352,9 @@ fn calculate_length(s: &String) -> usize {
 }
 ```
 
-</template>
+---
 
-<template #1>
+# Ссылки (reference) и заимствование (borrowing)
 
 ```mermaid
 flowchart LR
@@ -381,17 +376,13 @@ flowchart LR
     ]
 ```
 
-</template>
-
-<template #2>
 ```rs
 fn calculate_length(s: &String) -> usize { // s ссылка на строку
     s.len()
 } // Здесь, s выходит из области видимости. Из-за того, что calculate_length
   // не владеет s, она не очищает память.
 ```
-</template>
-</v-switch>
+
 ---
 
 # Мутабельные ссылки
@@ -421,7 +412,7 @@ fn change(some_string: &mut String) {
 }
 ```
 
-```rs
+```rs{*|4-5|*}
 // Мутабельная ссылка на значение может быть только одна
 let mut s = String::from("hello");
 
@@ -431,7 +422,7 @@ let r2 = &mut s;
 println!("{}, {}", r1, r2);
 ```
 
-```rs
+```rs{*|3-5|*}
 let mut s = String::from("hello");
 
 {
@@ -441,7 +432,7 @@ let mut s = String::from("hello");
 let r2 = &mut s;
 ```
 
-```rs
+```rs{*|4|5|6|*}
 // Одновременное хранение иммутабельных и мутабельных ссылок
 let mut s = String::from("hello");
 
@@ -470,7 +461,7 @@ fn dangle() -> &String {
 }
 ```
 
-```rs
+```rs{*|1|3|5|6|*}
 fn dangle() -> &String { // dangle возвращает ссылку
 
     let s = String::from("hello"); // s - новая строка
@@ -479,7 +470,7 @@ fn dangle() -> &String { // dangle возвращает ссылку
 } // Здесь s выходит из области видимости и пропадает. Память очищается
 ```
 
-```rs
+```rs{*|5|*}
 // Решение
 fn no_dangle() -> String {
     let s = String::from("hello");
@@ -498,8 +489,10 @@ fn no_dangle() -> String {
 let v: Vec<i32> = Vec::new();
 ```
 
-```rs
+```rs{*|1|3|*}
 let v = vec![1, 2, 3];
+
+let v1 = vec![1; 5];
 ```
 
 ```rs
@@ -511,7 +504,7 @@ v.push(7);
 v.push(8);
 ```
 
-```rs
+```rs{*|3|6|*}
 let v = vec![1, 2, 3, 4, 5];
 
 let third: &i32 = &v[2];
