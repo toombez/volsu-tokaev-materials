@@ -43,6 +43,14 @@ src: './05-structs.md'
 ---
 
 ---
+src: './06-enums.md'
+---
+
+---
+src: './07-modules.md'
+---
+
+---
 
 # Контакты
 
