@@ -9,3 +9,4 @@
 1. [Знакомство с языком программирования Rust](/system-programming/practice-1)
 1. [Управление потоком Rust](/system-programming/practice-2)
 1. [Векторы и строки](/system-programming/practice-3)
+1. [Владение, заимствование, перемещение и структуры](/system-programming/practice-4)
