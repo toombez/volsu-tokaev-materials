@@ -7,6 +7,7 @@
 ## Список практических работ
 
 1. [Знакомство с языком программирования Rust](/system-programming/practice-1)
-1. [Управление потоком Rust](/system-programming/practice-2)
-1. [Векторы и строки](/system-programming/practice-3)
-1. [Владение, заимствование, перемещение и структуры](/system-programming/practice-4)
+2. [Управление потоком Rust](/system-programming/practice-2)
+3. [Векторы и строки](/system-programming/practice-3)
+4. [Владение, заимствование, перемещение и структуры](/system-programming/practice-4)
+5. [Моделирование данных с помощью структур](/system-programming/practice-5)
