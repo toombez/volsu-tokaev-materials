@@ -51,6 +51,27 @@ src: './07-modules.md'
 ---
 
 ---
+src: './08-slices.md'
+---
+
+---
+src: './09-generics.md'
+---
+
+---
+src: './10-traits.md'
+---
+
+---
+
+# Источники
+
+- [Rust book](https://doc.rust-lang.org/book/)
+- [Rust by example](https://doc.rust-lang.org/rust-by-example/)
+- [rust 100 exercises](https://rust-exercises.com/100-exercises/)
+- [API стандартной библиотеки](https://doc.rust-lang.org/std/index.html)
+
+---
 
 # Контакты
 
