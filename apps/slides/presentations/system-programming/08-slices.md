@@ -24,7 +24,7 @@ layout: intro
 
 # slice
 
-```rs
+```rs{*|1|3|4|*}
 let s = String::from("hello world");
 
 let hello = &s[0..5];
@@ -69,7 +69,7 @@ flowchart LR
 
 ````md magic-move
 
-```rs
+```rs{*|4-5}
 // срез от начала
 let s = String::from("hello");
 
@@ -77,7 +77,7 @@ let slice = &s[0..2];
 let slice = &s[..2];
 ```
 
-```rs
+```rs{*|6-7}
 // срез до конца
 let s = String::from("hello");
 
@@ -87,7 +87,7 @@ let slice = &s[3..len];
 let slice = &s[3..];
 ```
 
-```rs
+```rs{*|6-7}
 // срез всех индексов
 let s = String::from("hello");
 
@@ -103,7 +103,6 @@ let slice = &s[..];
 # Slice и другие типы данных
 
 ````md magic-move
-
 ```rs
 let a = [1, 2, 3, 4, 5];
 ```
@@ -118,7 +117,6 @@ println!("{:?}", a[1..]) // [2, 3, 4, 5, 6, 7, 8]
 println!("{:?}", a[1..3]) // [2, 3]
 println!("{:?}", a[1..=3]) // [2, 3, 4]
 ```
-
 ````
 
 ---
@@ -126,7 +124,7 @@ println!("{:?}", a[1..=3]) // [2, 3, 4]
 # Преимущества использования slice
 
 ````md magic-move
-```rs
+```rs{*|1|6|7|8|*}
 fn slice_with_str(str: &str) {/* ... */}
 
 fn main() {
@@ -138,7 +136,7 @@ fn main() {
 }
 ```
 
-```rs
+```rs{*|1|6|7|8|*}
 fn slice_with_number(numbers: &[i32]) {/* ... */}
 
 fn main() {

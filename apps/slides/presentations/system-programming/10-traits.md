@@ -16,8 +16,7 @@ pub trait Summary {
 }
 ```
 
-
-```rs
+```rs{2-7|9-13|*}
 // news_article.rs
 pub struct NewsArticle {
     pub headline: String,
@@ -33,7 +32,7 @@ impl Summary for NewsArticle {
 }
 ```
 
-```rs
+```rs{2-7|9-13|*}
 // tweet.rs
 pub struct Tweet {
     pub username: String,
@@ -49,7 +48,7 @@ impl Summary for Tweet {
 }
 ```
 
-```rs
+```rs{*|2|3|6-13|15|*}
 // main.rs
 use summary::Summary;
 use tweet::Tweet;
@@ -74,7 +73,7 @@ fn main() {
 # реализация по-умолчанию
 
 ````md magic-move
-```rs
+```rs{*|2-4|*}
 pub trait Summary {
     fn summarize(&self) -> String {
         String::from("(Read more...)")
@@ -82,7 +81,7 @@ pub trait Summary {
 }
 ```
 
-```rs
+```rs{*|2-8|3|5-7|11-15|*}
 // summary.rs
 pub trait Summary {
     fn summarize_author(&self) -> String;
@@ -106,13 +105,13 @@ impl Summary for Tweet {
 # trait в качестве параметра
 
 ````md magic-move
-```rs
+```rs{*|1}
 pub fn notify(item: &impl Summary) {
     println!("Breaking news! {}", item.summarize());
 }
 ```
 
-```rs
+```rs{*|1}
 pub fn notify<T: Summary>(item: &T) {
     println!("Breaking news! {}", item.summarize());
 }
@@ -129,7 +128,7 @@ pub fn notify<T: Summary>(item1: &T, item2: &T) {}
 
 ---
 
-# параметр реализующий несколько trait
+# параметр, реализующий несколько trait
 
 ```rs
 // 1 вариант
@@ -143,7 +142,7 @@ pub fn notify<T: Summary + Display>(item: &T) {}
 
 # ключевое слово where
 
-```rs
+```rs{*|1-4|6-9|11-15|*}
 fn some_functionU(
     t: &(impl Display + Clone),
     u: &(impl Clone + Debug)
@@ -159,7 +158,6 @@ where
     T: Display + Clone,
     U: Clone + Debug,
 {}
-
 ```
 
 ---
@@ -167,7 +165,7 @@ where
 # Возвращаемое значение как trait
 
 ````md magic-move
-```rs
+```rs{*|1|2-9|*}
 fn returns_summarizable() -> impl Summary {
     Tweet {
         username: String::from("horse_ebooks"),
@@ -180,7 +178,7 @@ fn returns_summarizable() -> impl Summary {
 }
 ```
 
-```rs
+```rs{*|1|3-13|15-22|*}
 fn returns_summarizable(switch: bool) -> impl Summary {
     if switch {
         NewsArticle {
@@ -214,7 +212,7 @@ fn returns_summarizable(switch: bool) -> impl Summary {
 # услованая реализация на основе trait
 
 ````md magic-move
-```rs
+```rs{*|1-4|6-10|*}
 struct Pair<T> {
     x: T,
     y: T,
@@ -227,7 +225,7 @@ impl<T> Pair<T> {
 }
 ```
 
-```rs
+```rs{*|1|8-16|*}
 use std::fmt::Display;
 
 struct Pair<T> {

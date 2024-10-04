@@ -37,7 +37,7 @@ fn largest_char(list: &[char]) -> &char {
 }
 ```
 
-```rs
+```rs{1,4}
 fn largest_i32(list: &[i32]) -> &i32 {
     // --snip--
 }
@@ -64,7 +64,7 @@ fn largest<T>(list: &[T]) -> &T {
 }
 ```
 
-```rs
+```rs{5}
 fn largest<T>(list: &[T]) -> &T {
     let mut largest = &list[0];
 
@@ -84,7 +84,7 @@ fn largest<T>(list: &[T]) -> &T {
 # generic-структуры
 
 ````md magic-move
-```rs
+```rs{*|1-4|*}
 struct Point<T> {
     x: T,
     y: T,
@@ -96,7 +96,7 @@ fn main() {
 }
 ```
 
-```rs
+```rs{2,3,7|*}
 struct Point<T> {
     x: T,
     y: T,
@@ -107,7 +107,7 @@ fn main() {
 }
 ```
 
-```rs
+```rs{1-4|7|8|9|*}
 struct Point<T, U> {
     x: T,
     y: U,
@@ -125,7 +125,7 @@ fn main() {
 
 # generic-enum
 
-```rs
+```rs{*|1,6|2,3,7,8|*}
 enum Option<T> {
     Some(T),
     None,
@@ -141,7 +141,7 @@ enum Result<T, E> {
 
 # generic-методы (функции)
 
-```rs
+```rs{*|1-4|6-10|*}
 struct Point<T> {
     x: T,
     y: T,
@@ -164,6 +164,7 @@ fn main() {
 
 # реализация методов определенного generic-типа
 
+````md magic-move
 ```rs
 impl Point<f32> {
     fn distance_from_origin(&self) -> f32 {
@@ -172,6 +173,23 @@ impl Point<f32> {
 }
 ```
 
+```rs{*|1|8,11|9,12|*}
+impl Point<f32> {
+    fn distance_from_origin(&self) -> f32 {
+        (self.x.powi(2) + self.y.powi(2)).sqrt()
+    }
+}
+
+fn main() {
+    let int_point = Point { x: 5 };
+    let float_point = Point { x: 5.0 };
+
+    int_point.distance_from_origin() // Ошибка
+    float_point.distance_from_origin() // Сработает
+}
+```
+
+````
 ---
 
 # Производительность generic
