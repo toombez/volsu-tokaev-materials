@@ -63,6 +63,18 @@ src: './10-traits.md'
 ---
 
 ---
+src: './11-collections.md'
+---
+
+---
+src: './12-errors.md'
+---
+
+---
+src: './13-functional-programming.md'
+---
+
+---
 
 # Источники
 
