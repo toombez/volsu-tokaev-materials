@@ -8,6 +8,10 @@ export default defineConfig({
     outDir: 'dist',
 
     themeConfig: {
+        outline: {
+            level: [1, 3],
+        },
+
         // https://vitepress.dev/reference/default-theme-config
         nav: [
             { text: 'Курсы', link: '/cources' },
