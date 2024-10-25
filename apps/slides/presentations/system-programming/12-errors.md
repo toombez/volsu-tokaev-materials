@@ -207,3 +207,35 @@ impl Person{
     }
 }
 ```
+
+---
+
+# thiserror
+
+````md magic-move
+```rs
+#[derive(Debug)]
+pub enum AppError {
+    MissingQuery,
+    MissingFilename,
+    ConfigLoad,
+}
+```
+
+```rs{*|1|3|5-6|7-8|9-13|11|*}
+use thiserror::Error;
+
+#[derive(Debug, Error)]
+pub enum AppError {
+    #[error("Didn't get a query string")]
+    MissingQuery,
+    #[error("Didn't get a file name")]
+    MissingFilename,
+    #[error("Could not load config")]
+    ConfigLoad {
+        #[from]
+        source: io::Error,
+    }
+}
+```
+````
