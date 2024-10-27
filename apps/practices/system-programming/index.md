@@ -9,6 +9,7 @@
 3. [Векторы и строки](/system-programming/practice-3)
 4. [Владение, заимствование, перемещение и структуры](/system-programming/practice-4)
 5. [Моделирование данных с помощью структур](/system-programming/practice-5)
+6. [Реализация общих признаков данных](/system-programming/practice-6)
 
 ## Материалы к практическим
 
