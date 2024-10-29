@@ -79,6 +79,14 @@ src: './14-unit-testing.md'
 ---
 
 ---
+src: './15-lifetime.md'
+---
+
+---
+src: './16-smart-pointers.md'
+---
+
+---
 
 # Источники
 
