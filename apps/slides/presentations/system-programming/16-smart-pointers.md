@@ -367,3 +367,57 @@ b after = Cons(RefCell { value: 3 }, Cons(RefCell { value: 15 }, Nil))
 c after = Cons(RefCell { value: 4 }, Cons(RefCell { value: 15 }, Nil))
 ```
 ````
+
+---
+
+# `dyn`
+
+````md magic-move
+```rs
+trait Animal {
+    fn noise(&self);
+}
+```
+
+```rs{*|1-7|9-15|*}
+struct Sheep;
+
+impl Animal for Sheep {
+    fn noise(&self) {
+        println!("beeeeh");
+    }
+}
+
+struct Cow;
+
+impl Animal for Cow {
+    fn noise(&self) -> &'static str {
+        "moooooo!"
+    }
+}
+```
+
+```rs{*|1,3,5|1|*}
+fn get_animal_by_str_bad(s: &str) -> Result<impl Animal, String> {
+    if s == "Cow" {
+        Ok(Cow{})
+    } else if s == "Sheep" {
+        Ok(Sheep{})
+    } else {
+        Err("Unknown animal".to_string())
+    }
+}
+```
+
+```rs{*|1,3,5|*}
+fn get_animal_by_str(s: &str) -> Result<Box <dyn Animal>, String> {
+    if s == "Cow" {
+        Ok(Box::new(Cow{}))
+    } else if s == "Sheep" {
+        Ok(Box::new(Sheep{}))
+    } else {
+        Err("Unknown animal".to_string())
+    }
+}
+```
+````
