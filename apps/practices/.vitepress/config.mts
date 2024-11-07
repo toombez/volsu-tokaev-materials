@@ -37,6 +37,7 @@ export default defineConfig({
                             { text: 'Практика 4', link: '/practice-4' },
                             { text: 'Практика 5', link: '/practice-5' },
                             { text: 'Практика 6', link: '/practice-6' },
+                            { text: 'Практика 7', link: '/practice-7' },
                         ],
                     },
                     // {
