@@ -87,6 +87,10 @@ src: './16-smart-pointers.md'
 ---
 
 ---
+src: './17-concurrency.md'
+---
+
+---
 
 # Источники
 
