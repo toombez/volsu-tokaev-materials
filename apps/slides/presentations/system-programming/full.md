@@ -91,6 +91,18 @@ src: './17-concurrency.md'
 ---
 
 ---
+src: './18-futures.md'
+---
+
+---
+src: './19-IO.md'
+---
+
+---
+src: './20-cli.md'
+---
+
+---
 
 # Источники
 
