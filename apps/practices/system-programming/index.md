@@ -11,6 +11,7 @@
 5. [Моделирование данных с помощью структур](/system-programming/practice-5)
 6. [Реализация общих признаков данных](/system-programming/practice-6)
 6. [Unit-тесты](/system-programming/practice-7)
+6. [Умные указатели](/system-programming/practice-8)
 
 ## Материалы к практическим
 
