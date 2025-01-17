@@ -8,7 +8,7 @@ layout: 'intro'
 
 # Именованные аргументы
 
-```console
+```console{*|1-3|5-7|2,6|3,7|*}
 $ program --string-arg "Hello world" --bool-arg
 string argument: Hello world
 boolean argument: true
@@ -22,7 +22,7 @@ boolean argument: false
 
 # Позиционные аргументы
 
-```console
+```console{*|1-3|5-7|*}
 $ program foo bar
 first: foo
 second: bar
@@ -41,9 +41,9 @@ second: foo
 cargo add clap --features derive
 ```
 
-```rs
-
+```rs{*|1|4,5|6-14|7-9,11-13|16-22|17|19-21|*}
 use clap::Parser;
+
 /// Простая прогрмамм, приветствующая пользователя
 #[derive(Parser, Debug)]
 #[command(version, about, long_about = None)]
@@ -66,7 +66,7 @@ fn main() {
 }
 ```
 
-```console
+```console{*|1|2|4|6-10|12-17|*}
 $ demo --help
 Простая прогрмамм, приветствующая пользователя
 
@@ -92,7 +92,7 @@ Hello Me!
 # Subcommand
 
 ````md magic-move
-```rs
+```rs{*|2|4-9|*}
 use std::path::PathBuf;
 use clap::{Parser, Subcommand};
 
@@ -116,7 +116,7 @@ enum Commands {
 }
 ```
 
-```rs
+```rs{*|4-13|*}
 fn main() {
     // ...
 
@@ -135,7 +135,7 @@ fn main() {
 }
 ```
 
-```console
+```console{*|6-8|*}
 $ program --help
 A simple to use, efficient, and full-featured Command Line Argument Parser
 
@@ -156,7 +156,7 @@ Options:
 # Настройка парсера
 
 ````md magic-move
-```rs
+```rs{*|1|2|3|4|6-9|*}
 #[derive(Parser)]
 #[command(name = "MyApp")]
 #[command(version = "1.0")]
@@ -169,7 +169,7 @@ struct Cli {
 }
 ```
 
-```rs
+```rs{*|2|*}
 #[derive(Parser)]
 #[command(version, about, long_about = None)] // Read from `Cargo.toml`
 struct Cli {
@@ -186,7 +186,7 @@ struct Cli {
 # Валидация значений аргументов
 
 ````md magic-move
-```rs
+```rs{*|4,5|8-12|*}
 #[derive(Parser)]
 #[command(version, about, long_about = None)]
 struct Cli {
@@ -201,7 +201,7 @@ enum Mode {
 }
 ```
 
-```rs
+```rs{*|4-11|*}
 fn main() {
     let cli = Cli::parse();
 
@@ -216,7 +216,7 @@ fn main() {
 }
 ```
 
-```rs
+```rs{*|6,7|11|*}
 use clap::Parser;
 
 #[derive(Parser)]
@@ -233,7 +233,7 @@ fn main() {
 }
 ```
 
-```rs
+```rs{*|1,7|*}
 use std::ops::RangeInclusive;
 use clap::Parser;
 
@@ -270,17 +270,3 @@ fn port_in_range(s: &str) -> Result<u16, String> {
 }
 ```
 ````
-
----
----
----
----
----
----
----
----
----
----
----
-
-# clap
