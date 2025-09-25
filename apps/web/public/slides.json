@@ -1,0 +1,16 @@
+[
+  {
+    "title": "slide title",
+    "link": "/slide-link",
+    "theory": [
+      {
+        "title": "theory title",
+        "link": "theory-link"
+      },
+      {
+        "title": "theory title",
+        "link": "theory-link"
+      }
+    ]
+  }
+]
