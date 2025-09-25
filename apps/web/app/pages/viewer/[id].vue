@@ -18,8 +18,8 @@ const targetSlides = computed(() => {
 
 <template>
     <UPageBody>
-        <div v-if="targetSlides">
-            <UContainer>
+        <UContainer>
+            <div v-if="targetSlides">
                 <h1 class="text-5xl font-bold mb-4">
                     {{ targetSlides.title }}
                 </h1>
@@ -44,7 +44,7 @@ const targetSlides = computed(() => {
                     <li
                         v-for="theory in targetSlides.theory"
                     >
-                        <ULink :to="theory.link">
+                        <ULink :to="theory.link" external target="_blank">
                             <span>
                                 {{ theory.title }}
                             </span>
@@ -53,7 +53,20 @@ const targetSlides = computed(() => {
                         </ULink>
                     </li>
                 </ol>
-            </UContainer>
-        </div>
+            </div>
+            <div v-else>
+                <div>
+                    Презентация не найдена
+                </div>
+
+                <ULink to="/">
+                    <span>
+                        Вернуться на главную
+                    </span>
+
+                    <UIcon name="lucide:arrow-up-right" />
+                </ULink>
+            </div>
+        </UContainer>
     </UPageBody>
 </template>
